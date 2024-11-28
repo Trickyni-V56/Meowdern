@@ -1,7 +1,7 @@
-# ModernX
-An MPV OSC script based on [mpv-osc-modern](https://github.com/maoiscat/mpv-osc-modern/) that aims to mirror the functionality of MPV's stock OSC while with a more modern-looking interface.
+# Meowdern
+A hyperminimalist fork of the [ModernX](https://github.com/cyl0/ModernX) featuring only a seekbar and time displays. Designed for those who use keybinds almost-exclusively, but still want scrubbing functionality and [Thumbfast](https://github.com/po5/thumbfast) support.
 
-![img](https://github.com/cyl0/ModernX/blob/main/preview.png)
+![img]()
 
 # How to install
 
@@ -26,26 +26,10 @@ edit osc.conf in "\~\~/script-opts/" folder, however many options are changed, s
 
 To enable thumbnails in timeline, install [thumbfast](https://github.com/po5/thumbfast). No other step necessary.
 
-# Buttons
-
-like the built-in script, some buttons may accept multiple mouse actions, here is a list:
-
+# Other features
 ## Seekbar
 * Left mouse button: seek to chosen position.
 * Right mouse button: seek to the head of chosen chapter
-## Playlist back/forward buttons
-* Left mouse button: play previous/next file.
-* Right mouse button: show playlist.
-## Skip back/forward buttons
-* Left mouse button: go to previous/next chapter.
-* Right mouse button: show chapter list.
-## Jump back/forward buttons
-* Left mouse button: Jumps forwards/backwards by 5 seconds, or by the amount set in `user_opts`.
-* Right mouse button: Jumps forwards/backwards by 1 minute.
-* Shift + Left mouse button: Skips to the previous/next frame.
-## Cycle audio/subtitle buttons
-* Left mouse button/Right mouse button: cycle to next/previous track.
-* Middle mouse button: show track list.
 ## Playback time
 * Left mouse button: display time in milliseconds
 ## Duration
