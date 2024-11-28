@@ -1,7 +1,7 @@
 # Meowdern
 A hyperminimalist fork of the [ModernX](https://github.com/cyl0/ModernX) featuring only a seekbar and time displays. Designed for those who use keybinds almost-exclusively, but still want scrubbing functionality and [Thumbfast](https://github.com/po5/thumbfast) support.
 
-![img]()
+![img](./Preview.png)
 
 # How to install
 
