@@ -1,7 +1,7 @@
 # Meowdern
 A hyperminimalist fork of the [ModernX](https://github.com/cyl0/ModernX) featuring only a seekbar and time displays. Designed for those who use keybinds almost-exclusively, but still want scrubbing functionality and [Thumbfast](https://github.com/po5/thumbfast) support.
 
-![img](./Preview.png)
+![Screenshot of mpv with the meowdern OSC, also featuring the thumbfast integration](./Preview.png)
 
 # How to install
 
@@ -10,7 +10,7 @@ Locate your MPV folder. It is typically located at `\%APPDATA%\mpv\` on Windows 
 Put mordenx.lua into your mpv "\~\~/scripts/" folder. Create the "\~\~/scripts/" folder if you don't already have one and remove any other OSC scripts,
 then put `Material-Design-Iconic-Font.ttf` in the "\~\~/fonts" folder.
 
-in mpv.conf:
+In mpv.conf:
 
 ```
 osc = no
@@ -20,7 +20,7 @@ border = no # Optional, but recommended
 
 # How to config
 
-edit osc.conf in "\~\~/script-opts/" folder, however many options are changed, so refer to the user_opts variable in the script file for details.
+Edit osc.conf in "\~\~/script-opts/" folder, however many options are changed, so refer to the user_opts variable in the script file for details.
 
 # Thumbnails
 
