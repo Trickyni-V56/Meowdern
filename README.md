@@ -4,23 +4,30 @@ A hyperminimalist fork of the [ModernX](https://github.com/cyl0/ModernX) featuri
 ![Screenshot of mpv with the meowdern OSC, also featuring the thumbfast integration](./Preview.png)
 
 # How to install
+## Linux
+- Put `meowdern.lua` into `~/.config/mpv/scripts`. if the folder doesn't exist- create it!
+- Put `Material-Design-Iconic-Font.ttf` into the `~/.config/mpv/fonts` folder.
+- In `mpv.conf`, add:
+    
+    ```
+    osc = no
+    border = no # Optional, but recommended
+    ```
+- `Material-Design-Iconic-Font.ttf` can also be downloaded from [here](https://zavoloklom.github.io/material-design-iconic-font/).
+## Windows
+- Put `meowdern.lua` into `\%APPDATA\mpv\scripts`. if the folder doesn't exist- create it!
+- Put `Material-Design-Iconic-Font.ttf` into the `\%APPDATA\mpv\fonts` folder.
+- In `mpv.conf`, add:
+    
+    ```
+    osc = no
+    border = no # Optional, but recommended
+    ```
+- `Material-Design-Iconic-Font.ttf` can also be downloaded from [here](https://zavoloklom.github.io/material-design-iconic-font/).
 
-Locate your MPV folder. It is typically located at `\%APPDATA%\mpv\` on Windows and `~/.config/mpv/` on Linux/MacOS. See the [Files section](https://mpv.io/manual/master/#files) in mpv's manual for more info.
+# Configuration
 
-Put mordenx.lua into your mpv "\~\~/scripts/" folder. Create the "\~\~/scripts/" folder if you don't already have one and remove any other OSC scripts,
-then put `Material-Design-Iconic-Font.ttf` in the "\~\~/fonts" folder.
-
-In mpv.conf:
-
-```
-osc = no
-border = no # Optional, but recommended
-```
-`Material-Design-Iconic-Font.ttf` can also be downloaded from [here](https://zavoloklom.github.io/material-design-iconic-font/).
-
-# How to config
-
-Edit osc.conf in "\~\~/script-opts/" folder, however many options are changed, so refer to the user_opts variable in the script file for details.
+Edit osc.conf in "~/.config/mpv/script-opts/" folder. Refer to the user_opts variable in the script file for details.
 
 # Thumbnails
 
