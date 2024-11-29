@@ -11,7 +11,12 @@ A hyperminimalist fork of the [ModernX](https://github.com/cyl0/ModernX) featuri
     
     ```
     osc = no
-    border = no # Optional, but recommended
+    border = no # Optional, removes winodow borders
+
+    # (Optional) Additional options for the OSD (On Screen Display) 
+    osd-on-seek=no
+    osd-border-size=1
+    osd-bar-h=1
     ```
 - `Material-Design-Iconic-Font.ttf` can also be downloaded from [here](https://zavoloklom.github.io/material-design-iconic-font/).
 ## Windows
@@ -21,7 +26,12 @@ A hyperminimalist fork of the [ModernX](https://github.com/cyl0/ModernX) featuri
     
     ```
     osc = no
-    border = no # Optional, but recommended
+    border = no # Optional, removes winodow borders
+    
+    # (Optional) Additional options for the OSD (On Screen Display) 
+    osd-on-seek=no
+    osd-border-size=1
+    osd-bar-h=1
     ```
 - `Material-Design-Iconic-Font.ttf` can also be downloaded from [here](https://zavoloklom.github.io/material-design-iconic-font/).
 
