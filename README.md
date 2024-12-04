@@ -44,6 +44,7 @@ Edit osc.conf in "~/.config/mpv/script-opts/" folder. Refer to the user_opts var
 To enable thumbnails in timeline, install [thumbfast](https://github.com/po5/thumbfast). No other step necessary.
 
 # Other features
+* OSC shows on seek! (turns out its not a standard feature)
 ## Seekbar
 * Left mouse button: seek to chosen position.
 * Right mouse button: seek to the head of chosen chapter
