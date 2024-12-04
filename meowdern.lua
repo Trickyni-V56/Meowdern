@@ -1736,7 +1736,6 @@ function osc_init()
 			return ('-'..mp.get_property_osd('playtime-remaining/full'))
 		else
 			return ('-'..mp.get_property_osd('playtime-remaining'))
-        end)
 		end
         else
 		if (state.fulltime) then
