@@ -1,12 +1,3 @@
---seek line 148 for colors
-
--- mpv-osc-modern by maoiscat
--- email:valarmor@163.com
--- https://github.com/maoiscat/mpv-osc-modern
-
--- fork by cyl0
--- https://github.com/cyl0/ModernX/
-
 local assdraw = require 'mp.assdraw'
 local msg = require 'mp.msg'
 local opt = require 'mp.options'
@@ -53,6 +44,7 @@ local user_opts = {
     timetotal = true,          	-- display total time instead of remaining time?
     timems = false,             -- Display time down to millliseconds by default
     visibility = 'auto',        -- only used at init to set visibility_mode(...)
+    seek_visibility_time = 4,   -- Time before OSC fades after seeking
     windowcontrols = 'no',    -- whether to show window controls
     greenandgrumpy = false,     -- disable santa hat
     language = 'eng',		-- eng=English, chs=Chinese
@@ -1744,6 +1736,7 @@ function osc_init()
 			return ('-'..mp.get_property_osd('playtime-remaining/full'))
 		else
 			return ('-'..mp.get_property_osd('playtime-remaining'))
+        end)
 		end
         else
 		if (state.fulltime) then
@@ -1826,7 +1819,7 @@ end
 
 function pause_state(name, enabled)
     state.paused = enabled
-    mp.add_timeout(0.1, function() state.osd:update() end) 
+    mp.add_timeout(0.1, function() state.osd:update() end)
     if user_opts.showonpause then
 		if enabled then
 			state.lastvisibility = user_opts.visibility
@@ -1837,6 +1830,29 @@ function pause_state(name, enabled)
 		end
 	end
     request_tick()
+end
+
+local seek_state_timer
+
+function seek_state(_, enabled)
+    if not enabled then return end
+
+    if seek_state_timer then
+        seek_state_timer:kill()
+        seek_state_timer:resume()
+    else
+        state.lastvisibility = user_opts.visibility
+        state.paused = true
+        visibility_mode("always", true)
+        show_osc()
+
+        seek_state_timer = mp.add_timeout(user_opts.seek_visibility_time, function()
+            state.paused = false
+            visibility_mode(state.lastvisibility, true)
+            state.osd:update()
+            seek_state_timer = nil
+        end)
+    end
 end
 
 function cache_state(name, st)
@@ -2342,6 +2358,7 @@ mp.observe_property('idle-active', 'bool',
     end
 )
 mp.observe_property('pause', 'bool', pause_state)
+mp.observe_property('seeking', 'native', seek_state)
 mp.observe_property('demuxer-cache-state', 'native', cache_state)
 mp.observe_property('vo-configured', 'bool', function(name, val)
     request_tick()
